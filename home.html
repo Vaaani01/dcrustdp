@@ -1,0 +1,557 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91424309-1', 'auto');
+  ga('send', 'pageview');
+
+</script><html>
+<head>
+<meta charset="utf-8">
+<title>DCRUST Examination Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script src="jquery.js"></script>
+<script src="bootstrap.min.js"></script>
+
+ <script type="text/javascript">
+$(document).ready(function() {
+  //select the POPUP FRAME and show it
+  $("#popup").hide().fadeIn(1000);
+
+  //close the POPUP if the button with id="close" is clicked
+  $("#close").on("click", function(e) {
+    e.preventDefault();
+    $("#popup").fadeOut(1000);
+  });
+});
+</script> 
+
+<style>
+#popup {
+    display:none;
+    position:absolute;
+    margin:0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px 2px #000;
+}
+</style>
+<style>
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<script type="text/javascript">
+
+    function myFunction() { 
+	var br="";
+     if(navigator.userAgent.indexOf("Chrome") != -1 ) 
+    {
+        br='Chrome';
+    }
+    else if(navigator.userAgent.indexOf("Opera") != -1 )
+    {
+     br='Opera';
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {
+        br='Firefox';
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    {
+      br='IE'; 
+    }  
+    else 
+    {
+       br='unknown';
+    }
+	
+	if (br!='Chrome')
+	   {
+	     alert("We recommand to use \n Chrome Browser \n for BEST viewing of our website");
+	   }	 
+	
+    }
+    
+</script>
+
+<!--
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="mainImg.js"></script>
+  -->
+  
+<script type="text/javascript">
+window.onload = function () {
+  
+    var images = ['img/0.jpg','img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg','img/9.jpg','img/10.jpg'];
+    images.current = 0;
+    
+    var img = document.getElementById( 'img' );
+    
+    setInterval(function () {
+        img.src = images[ images.current++ ];
+        if ( images.current === images.length ) images.current = 0;        
+    }, 9000 );
+};
+</script>
+
+<script type="text/javascript">
+window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.pause();
+}
+</script>
+
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<style type="text/css">
+body {
+/* background-image: linear-gradient(violet,indigo,blue , green , yellow, orange , red); 
+background-image: url("holi_2023_111.jpg"); */	
+background-image: url("Happy-Holi-GIF11.gif");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+font-family: "Comic Sans MS", cursive;
+background-color: white;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 1.5em;
+
+}
+a { text-decoration: none; }
+h1 { font-size: 1em; }
+h1, p {
+margin-bottom: 10px;
+}
+strong {
+font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+
+/* ---------- LOGIN ---------- */
+menu1 hover {
+    background-color: yellow;
+}
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+font-family: "Comic Sans MS", cursive;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+background-color: #036;
+}
+
+#navcontainer ul li a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+#newsnupdates{
+width: 950px;
+height: 250px;
+border: 3px solid #73AD21;
+margin-left: auto ;
+margin-right: auto ;
+overflow: auto;
+
+
+
+}
+
+</style>
+<style>
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  max-height: 360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  border: 2px solid #FFF;
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+  content: "×";
+}
+
+#fade:hover ~ #boxclose {
+  display:none;
+}
+
+.test:hover ~ .test2 {
+  display: none;
+}
+
+</style>
+</head>
+<body onload="myFunction()">
+<center>
+
+
+<table  align="center" >
+<tr>
+<td><img src="logo.png" ></td>
+<td>
+<div id="headertop" style="background-color:#008dde;
+                           height: 80px; width: 100%; margin: 1px 0; 
+						   text-align: center; 
+						   color: white; 
+						   font: bold 20px Courier New, monospace; 
+						   text-decoration: uppercase; 
+						   letter-spacing: 3px; 
+						   padding: 10px 0px">
+Deenbandhu&nbsp&nbspChhotu&nbsp&nbspRam&nbsp&nbspUniversity&nbsp&nbspof&nbsp&nbspScience&nbsp&nbspand&nbsp&nbspTechnology<br>
+Murthal, Sonepat (Haryana) - 131039.<br>A State Govt.University Established Under Haryana Legislature<br> Act No.29 of 2006 and recognized under 12(B) of UGC Act,1956
+</div>
+</td>
+<td><img src="logo.png" ></td>
+</tr>
+<tr><td colspan="3" align="center"><img align="center" src="ewing.jpg" ></td></tr>
+<!-- <tr><td colspan="3" align="center"><img align="center" src="images/holi_2020.png" ></td></tr> -->
+<tr>
+<td colspan="3" align="center">
+	
+
+			<div class="w3-content w3-section" style="max-width:500px">
+
+ 
+ <img class="mySlides w3-animate-fading" src="IMG-2025-1.jpg" style="width:100%">
+ <img class="mySlides w3-animate-fading" src="IMG-2025-2.jpg" style="width:100%">
+
+  
+</div>
+		
+
+</td>
+</tr>
+
+
+
+<tr>
+  <td colspan="3" align="center">
+    <div style="font-family: 'Comic Sans MS', cursive;">
+      <strong>
+        <img src="flashing_new.gif" />
+        <a href="https://digilocker.meripehchaan.gov.in">Digilocker and Creation of ABC ID (Academic Bank of Credit)</a>
+        <br><br>
+        <a href="https://www.dcrustedp.in/docverify">Registration of firms for online document verification</a>
+        <br><br>
+      </strong>
+    </div>
+  </td>
+</tr>
+
+
+
+</table>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+<body>
+
+
+<style>
+    .navbar {
+        background-color: #f9f9f9;
+        border: 1px solid #cfd8dc;
+        width: 70%;
+        margin: 0 auto;
+        font-family: "Comic Sans MS", cursive;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .navbar li {
+        position: relative;
+        padding: 18px 16px;
+        cursor: pointer;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        color: #919090;
+        font-style: italic;
+        display: block;
+        font-size: 16px;
+    }
+
+    .navbar li:hover {
+        background-color: #e3f2fd;
+    }
+
+    .navbar li .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        min-width: 220px;
+        text-align: left;
+    }
+
+    .navbar li .dropdown li {
+        padding: 10px 15px;
+        background-color: #fff;
+        white-space: nowrap;
+    }
+
+    .navbar li .dropdown li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .navbar li:hover .dropdown {
+        display: block;
+    }
+</style>
+
+<div class="navbar">
+    <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">INSTITUTIONS</a></li>
+        <li>
+            <a href="#">PROGRAMMES</a>
+            <ul class="dropdown">
+                <li><a href="#">Ph.D PROGRAMMES</a></li>
+                <li><a href="#">PG PROGRAMMES</a></li>
+                <li><a href="#">Dual Degree PROGRAMMES</a></li>
+                <li><a href="#">UG PROGRAMMES</a></li>
+                <li><a href="#">PG Diploma PROGRAMMES</a></li>
+                <li><a href="#">CERTIFICATE PROGRAMMES</a></li>
+            </ul>
+        </li>
+        <li><a href="#">RULEBOOK</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li>
+            <a href="#">DOWNLOADS</a>
+            <ul class="dropdown">
+                <li><a href="#">Previous question papers</a></li>
+                <li><a href="#">Additional_SUB._APP._B.Ed.</a></li>
+                <li><a href="#">Official Transcript</a></li>
+                <li><a href="#">Duplicate Certificates</a></li>
+                <li><a href="#">Provisional Degree</a></li>
+                <li><a href="#">Correction in Certificates</a></li>
+                <li><a href="#">Improvement Application</a></li>
+                <li><a href="#">Examinations Rule Book</a></li>
+            </ul>
+        </li>
+        <li><a href="#">DATESHEET</a></li>
+        <li><a href="index.html">LOGIN</a></li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() 
+{
+	$('#nav li').hover(function() 
+	{
+		$('ul', this).slideDown('fast');
+	}, function() 
+	{
+		$('ul', this).slideUp('fast');
+	});
+});
+</script>
+</body>
+</html>
+
+</div>
+<br>
+<center>
+<!--
+<font face="verdana" size="4" color="red">
+<p> <img src="images/flashing_new.gif" />
+<a href="http://dcrustm.ac.in/wp-content/uploads/2014/04/NOTICE-MATH-102B.pdf">Important notice regarding MATH-102B Re-examination.</a> </p>
+</font>
+
+<br>
+-->
+<div id="newsnupdates">
+
+
+
+<marquee direction="up" scrolldelay="200" onmouseover="this.stop();" onmouseout="this.start();">
+
+
+<font face="verdana" size="4" color="red">
+<p> <img src="images/New_Icon_Flashing.gif" style="width:50px;height:60px;" />
+<a  href="contact.php"  target="_blank">Student's Grievances Cell (Exams)</a> </p>
+</font>
+
+
+<font face="verdana" size="4" color="red">
+<p> <img src="flashing_new.gif" />
+<a href="https://www.dcrustedp.in/pdf/improvementdec2019.pdf" target="_blank">Improvement Examination, May 2018 - Notice and Application Form.</a> </p>
+</font>
+
+<font face="verdana" size="4" color="red">
+<p> <img src="flashing_new.gif" />
+Results declared for All Education Programs held in Jan. 2020 Examination - Login to check your result <img src="images/flashing_new.gif" /></p>
+</font>
+
+<font face="verdana" size="4" color="red">
+<p> <img src="flashing_new.gif" />
+<a href="https://nad.ndml.in/NAD/studentRegistrationWithOutAaddhaar.html" target="_blank">Student Registration to National Academic Depository(NAD) - Notice.</a> </p>
+</font>
+<br>
+-->
+
+
+
+<p>
+<img src="flashing_new.gif"/>
+<a href="https://www.dcrustedp.in/regform_new.php">Results declared for M.Ed/ M.P.E.S / B.P.E.S / B.P.Ed. /B.Ed  July 2019 examinations.</a>
+<img src="flashing_new.gif"/>
+</p>
+-->
+<font face="verdana" size="4" color="green">
+<p> 
+
+<p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/notification 2 reg main reappear July 2025 EDU exam.pdf' target='_blank'>Notification 2 - Regarding Main & Re-appear examinations of M Ed., M Ed. (Special Education), B Ed. (Special Education), MPES, BPES and BPED to be held in July 2025 (DCRUST/Conduct/2673-2693 dated 12.06.2025)
+</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/Improvement Notice.pdf' target='_blank'>Notification for Improvement Exam June 2025</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/notice reg date sheet june 2025 exam.pdf' target='_blank'>Notice - Regarding Theory Date Sheets of UG, PG Programs, Dual Degree, Ph. D Course Work for June 2025 Examinations (DCRUST/Conduct/Spl/1-50 dated 29.05.2025)
+</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/notification reg main reappear exam june 2025.pdf' target='_blank'>Notification regarding Main & Re-appear examinations of UG, Dual Degree, PG Programs & Ph.D Course Work to be held in June 2025 (DCRUST/Conduct/1140-1189 dated 25.04.2025)
+</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/notification reg main reappear EDU exam June 2025.pdf' target='_blank'>Notification regarding Main & Re-appear examinations of Bachelor of Education to be held in June 2025 (DCRUST/Conduct/1193-1242 dated 25.04.2025)
+</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/Regarding dispose off the old Re-evaluation record upto May June 2021 examinatio ns.pdf' target='_blank'>dispose of re-evaluation answer scripts</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/Inspection & Re-evaluation order (1).pdf' target='_blank'>Regarding Re-evaluation of Answer Scripts and Inspection of Answer Scripts by the concerned students for the odd semester of Jan. 2023 (DCRUST/Re-evaluation/38 dated 19.07.2023)</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/Rule 5 of Haryana Righ to Service Act 2014 Notification (2).pdf' target='_blank'>Services to be notify as per Rule 5 of Haryana Right to Service Act 2014
+</a></p><p><img src="images/New_Icon_Flashing.gif" width="40px" height="40px"/><a href='pdf/Rule 5 of Haryana Right to Service Act 2014 (2).pdf' target='_blank'>Haryana Service Act 2014</a></p></font>
+
+
+
+<font face="verdana" size="3" color="blue">
+<p> <img src="flashing_new.gif" />
+If you have not registered , kindly register now.  </p>
+</font>
+
+<font face="verdana" size="3" color="green">
+<p>It is requested to all that if any error/discrepancy is noticed in the result card available on the website of the recently declared result then please intimate the EDP center/COE office immediately. </p>
+
+
+
+</marquee>
+</div>
+
+<table  align="center" >
+ <tr>
+ <td colspan="2" align="center">
+&#169; Developed and Maintained By EDP - DCRUSTM
+ </td>
+ </tr>
+</table>

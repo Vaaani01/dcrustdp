@@ -1,0 +1,131 @@
+<html>
+<head>
+    <script>
+        function myFunctionHide() {
+            var x = document.getElementById("myDIV");
+            x.style.display = "none";
+        }
+
+        function myFunctionShow() {
+            var x = document.getElementById("myDIV");
+            x.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <!-- <form method="post" name="customerData" action="#">!-->
+        <form method="post" name="customerData" action="MainFeeNext.php">
+            <table width="40%" height="100" border='1' align="center">
+                <caption><font size="4" color="blue"></font></caption>
+                <tr>
+                    <td><img src="logo.png"></td>
+                    <td style="background-color:#008dde; height: 25px; width: 100%; margin: 1px 0; text-align: center; color: white; font: bold 20px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 3px; padding: 8px 0px">
+                        Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology<br>
+                        Murthal&nbsp;&nbsp;Sonepat
+                    </td>
+                    <td><img src="logo.png"></td>
+                </tr>
+            </table>
+            <br />
+            <br />
+
+            <table style="border: 1px solid black;">
+                <tr>
+                    <!--<td>Are You Hosteller</td>-->
+                    <td style="color: red; font-size:18px;">Pay your semester fee</td>
+                    <td>
+                      
+                        <input type="radio" name="Hostel" value="no" onclick="myFunctionHide()" checked> Yes
+                    </td>
+                </tr>
+            </table>
+            <br />
+           
+            <br />
+            <br />
+
+            <table style="width:50%">
+                <tr>
+                    <td style="text-align:center">
+                        <input type='submit' name='submit' value='submit'>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+
+        <br>
+        <center>
+            <table border='1'>
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Order No.</th>
+                    <th>Order_Datetime</th>
+                    <th>Ship_Date_Time</th>
+                    <th>Payment_Mode</th>
+                    <th>Card_Type</th>
+                    <th>Card_Name</th>
+                    <th>Gross Amount</th>
+                    <th>Device_Type</th>
+                    <th>Customer_IP</th>
+                    <th>order_bank_ref_no'</th>
+                    <th>rder_bank_arn_no</th>
+                    <th>Remarks</th>
+                </tr>
+                <form action='#' method='post'>
+                    <tr>
+                        <td>1</td>
+                        <td>M_20001436008_BN6</td>
+                        <td>2021-06-13 21:58:36.813</td>
+                        <td>2021-06-13 21:59:38.977</td>
+                        <td>Debit Card</td>
+                        <td>Debit Card</td>
+                        <td>Visa Debit Card</td>
+                        <td>3250.00</td>
+                        <td>MOB</td>
+                        <td>157.36.46.162</td>
+                        <td>692307</td>
+                        <td></td>
+                        <td><a href="print_recipt.php?xid=110184812464">Print Receipt</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>M_20001436008_UK7</td>
+                        <td>2022-03-11 19:17:30.703</td>
+                        <td>2022-03-11 19:19:10.243</td>
+                        <td>Net Banking</td>
+                        <td>Net Banking</td>
+                        <td>State Bank of India</td>
+                        <td>3250.00</td>
+                        <td>MOB</td>
+                        <td>103.134.132.102</td>
+                        <td>IGANEERWI6</td>
+                        <td>0</td>
+                        <td><a href="print_recipt.php?xid=111440143468">Print Receipt</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>M_20001436008_CF6</td>
+                        <td></td>
+                        <td>04/06/2025 12:27:32</td>
+                        <td>Unified Payments</td>
+                        <td></td>
+                        <td>UPI</td>
+                        <td>4750.00</td>
+                        <td></td>
+                        <td></td>
+                        <td>135697498002</td>
+                        <td></td>
+                        <td><a href="print_recipt.php?xid=113792375553">Print Receipt</a></td>
+                    </tr>
+                </form>
+            </table>
+            <form action='#' method='post'></form>
+        </center>
+    </center>
+</body>
+</html>

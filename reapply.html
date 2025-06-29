@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DCRUST Examination</title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.post").click(function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var href = this.href;
+                var parts = href.split('?');
+                var url = parts[0];
+                var params = parts[1].split('&');
+                var pp, inputs = '';
+                for (var i = 0, n = params.length; i < n; i++) {
+                    pp = params[i].split('=');
+                    inputs += '<input type="hidden" name="' + pp[0] + '" value="' + pp[1] + '" />';
+                }
+                $("body").append('<form action="' + url + '" method="post" id="poster">' + inputs + '</form>');
+                $("#poster").submit();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function Redirect() {
+            window.location = "https://www.dcrustedp.in/PG/add_re_subject.php";
+        }
+    </script>
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <td><img src="logo.png"></td>
+            <td>
+                <div id="headertop" style="background-color:#008dde; height: 50px; width: 100%; margin: 1px 0;
+                    text-align: center; color: white; font: bold 20px Helvetica, Sans-Serif;
+                    text-decoration: uppercase; letter-spacing: 3px; padding: 8px 0px">
+                    Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology<br>
+                    Murthal Sonepat (Haryana) - 131039
+                </div>
+            </td>
+            <td><img src="logo.png"></td>
+        </tr>
+    </table>
+
+    <center>
+        <form id='myform' name='myform' method='post' action='reappear_imp_apply_ajex_1.php'>
+            <table border='1' bordercolor='#8080cc' bordercolorlight='#8080c0' bordercolordark='#400080' bgcolor='#ffffcc'>
+                <tr>
+                    <th colspan='7' align='center'>
+                        <font face='Comic sans MS' size='4' color='green'>Online Reappear Form</font>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan='7' align='center'>
+                        <font face='Comic sans MS' size='4' color='green'>Roll No. 20001436008</font>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Select/<br>Unselect</th>
+                    <th>Sr.No.</th>
+                    <th>Semester</th>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Last Date to Apply</th>
+                </tr>
+
+                <!-- <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DMT102,Mathematics- II,02' /></td><td align='center'>1</td><td>02</td><td>DMT102</td><td>Mathematics- II</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH104,Electricity & Magnetism,02' /></td><td align='center'>2</td><td>02</td><td>DPH104</td><td>Electricity & Magnetism</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DMT202,Mathematics- IV,04' /></td><td align='center'>3</td><td>04</td><td>DMT202</td><td>Mathematics- IV</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH402,QUANTUM MECHANICS,08' /></td><td align='center'>4</td><td>08</td><td>DPH402</td><td>QUANTUM MECHANICS</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH404,DIGITAL ELECTRONICS,08' /></td><td align='center'>5</td><td>08</td><td>DPH404</td><td>DIGITAL ELECTRONICS</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH406,ADVANCED NUCLEAR PHYSICS,08' /></td><td align='center'>6</td><td>08</td><td>DPH406</td><td>ADVANCED NUCLEAR PHYSICS</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH408,CONDENSED MATTER PHYSICS-II,08' /></td><td align='center'>7</td><td>08</td><td>DPH408</td><td>CONDENSED MATTER PHYSICS-II</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH501,ADVANCED QUANTUM MECHANICS,09' /></td><td align='center'>8</td><td>09</td><td>DPH501</td><td>ADVANCED QUANTUM MECHANICS</td><td align='center'>04-06-2025</td></tr>
+                <tr><td align='center'><input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH503,STATISTICAL PHYSICS OF PARTICLES AND FIELDS,09' /></td><td align='center'>9</td><td>09</td><td>DPH503</td><td>STATISTICAL PHYSICS OF PARTICLES AND FIELDS</td><td align='center'>04-06-2025</td></tr> -->
+
+                <tr>
+                    <td colspan='7' align='center'>
+                        &nbsp;<br>
+                        <input type='submit' name='submit' value='Submit'><br>
+                        &nbsp;<br>
+                        Note: Students can add courses to the above tentative list using below shown button.<br>
+                        Courses selected / added should be per odd/even rule of exam.<br>
+                        <strong>Do NOT apply</strong> in the course which you have passed.<br>
+                        Fees deposited once will not be refunded.<br>
+                        In case of any doubts mail your query to <strong>dcrustmurthal.edpcentre@gmail.com</strong><br><br><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+    </center>
+</body>
+</html>

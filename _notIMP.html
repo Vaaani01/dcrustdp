@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>DCRUST - Examination Wing Login</title>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style type="text/css">
+    body {
+        color: #5a5656;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    a { text-decoration: none; }
+
+    h1 { font-size: 1em; }
+
+    h1, p {
+        margin-bottom: 10px;
+    }
+
+    strong { font-weight: bold; }
+
+    .uppercase { text-transform: uppercase; }
+
+    /* ---------- LOGIN ---------- */
+    #login {
+        margin: 50px auto;
+        width: 300px;
+    }
+
+    form fieldset input[type="text"],
+    input[type="password"] {
+        background-color: #e5e5e5;
+        border: none;
+        border-radius: 3px;
+        color: #5a5656;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        height: 50px;
+        outline: none;
+        padding: 0px 10px;
+        width: 300px;
+        -webkit-appearance:none;
+    }
+
+    form fieldset input[type="submit"] {
+        background-color: #008dde;
+        border: none;
+        border-radius: 3px;
+        color: #f4f4f4;
+        cursor: pointer;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        height: 50px;
+        text-transform: uppercase;
+        width: 300px;
+        -webkit-appearance:none;
+    }
+
+    form fieldset a {
+        color: #5a5656;
+        font-size: 10px;
+    }
+
+    form fieldset a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+<table align="center">
+<tr>
+    <td><img src="logo.png"></td>
+    <td style="background-color:#008dde; height: 25px; width: 100%; margin: 1px 0; text-align: center; color: white; font: bold 20px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 3px; padding: 8px 0px">
+        Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology<br>
+        Murthal&nbsp;&nbsp;Sonepat
+    </td>
+    <td><img src="logo.png"></td>
+</tr>
+<tr><td colspan="3" align="center"><img src="ewing.jpg"></td></tr>
+<tr><td colspan="3" align="center"><img src="hindi.png"></td></tr>
+</table>
+
+<br>
+
+<div id="login">
+<h1><strong>Welcome - </strong> Enter your login details</h1>
+
+<form name="myloginform" id="myloginform" action="#" method="POST">
+    <fieldset>
+        <select name="UGPG" id="UGPG" style="width:300px;" required>
+            <option value="">Select</option>
+            <option value="UG">UG Programs</option>
+            <option value="PG">PHD/PG/Integrated Programs</option>
+            <option value="Edu">Education Programs</option>
+        </select>
+
+        <p><input type="text" autocomplete="off" name="Username" id="username" value="Username"
+            onBlur="if(this.value=='')this.value='Username'"
+            onFocus="if(this.value=='Username')this.value='' "></p>
+
+        <p><input type="password" id="password" name="Password" value="Password"
+            onBlur="if(this.value=='')this.value='Password'"
+            onFocus="if(this.value=='Password')this.value='' "></p>
+
+        <div class="g-recaptcha" data-sitekey="6LdqznArAAAAAKdmuovCwNVskQOl1Rh00Dbag5hU"></div>
+
+        <p><input type="submit" value="Login"></p>
+
+        <input type="button" onclick="location.href='regform_new.php';" style="color: #f4f4f4; background-color: #008dde; border-radius: 12px" value="New Registration"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="location.href='psw_forget_1.php';" style="color: #f4f4f4; background-color: #008dde; border-radius: 12px" value="Forget Password ?"/>
+    </fieldset>
+</form>
+</div>
+</body>
+</html>

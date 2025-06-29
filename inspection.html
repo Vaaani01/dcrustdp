@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DCRUST Examination</title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.post").click(function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var href = this.href;
+                var parts = href.split('?');
+                var url = parts[0];
+                var params = parts[1].split('&');
+                var pp, inputs = '';
+                for (var i = 0, n = params.length; i < n; i++) {
+                    pp = params[i].split('=');
+                    inputs += '<input type="hidden" name="' + pp[0] + '" value="' + pp[1] + '" />';
+                }
+                $("body").append('<form action="' + url + '" method="post" id="poster">' + inputs + '</form>');
+                $("#poster").submit();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <td><img src="logo.png"></td>
+            <td>
+                <div id="headertop" style="background-color:#008dde;
+                           height: 50px; width: 100%; margin: 1px 0; 
+                           text-align: center; 
+                           color: white; font: bold 20px Helvetica, Sans-Serif; 
+                           text-decoration: uppercase; 
+                           letter-spacing: 3px; 
+                           padding: 8px 0px">
+                    Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology<br>
+                    Murthal Sonepat (Haryana) - 131039
+                </div>
+            </td>
+            <td><img src="logo.png"></td>
+        </tr>
+    </table>
+
+    <center>
+        <form id='myform' name='myform' method='post' action='ins_1_ajax.php'>
+            <table border='1' bordercolor='#8080cc' bordercolorlight='#8080c0' bordercolordark='#400080' bgcolor='#ffffcc'>
+                <tr>
+                    <th colspan='7' align='center'>
+                        <font face='Comic sans MS' size='4' color='green'>
+                            Online inspection of checked answer book Form
+                        </font><br>
+                        Inspection Fee : &#8377 400/- per paper.
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan='7' align='center'>
+                        <font face='Comic sans MS' size='4' color='green'>
+                            Roll No. : 20001436008
+                        </font>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Select/<br>Unselect</th>
+                    <th>Sr.No.</th>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Marks Obtained</th>
+                    <th>Maximum Marks</th>
+                    <th>Last Date to Apply</th>
+                </tr>
+                <tr>
+                    <td align='center'>
+                        <input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH501,ADVANCED QUANTUM MECHANICS,16,75' />
+                    </td>
+                    <td align='center'>1</td>
+                    <td>DPH501</td>
+                    <td>ADVANCED QUANTUM MECHANICS</td>
+                    <td align='center'>61</td>
+                    <td align='center'>75</td>
+                    <td align='center'>03-05-2025</td>
+                </tr>
+                <tr>
+                    <td align='center'>
+                        <input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH503,STATISTICAL PHYSICS OF PARTICLES AND FIELDS,21,75' />
+                    </td>
+                    <td align='center'>2</td>
+                    <td>DPH503</td>
+                    <td>STATISTICAL PHYSICS OF PARTICLES AND FIELDS</td>
+                    <td align='center'>58</td>
+                    <td align='center'>75</td>
+                    <td align='center'>03-05-2025</td>
+                </tr>
+                <tr>
+                    <td align='center'>
+                        <input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH511,ELECTRONICS SPL.-I (ANALOG COMMUNICATION SYSTEMS),41,75' />
+                    </td>
+                    <td align='center'>3</td>
+                    <td>DPH511</td>
+                    <td>ELECTRONICS SPL.-I (ANALOG COMMUNICATION SYSTEMS)</td>
+                    <td align='center'>60</td>
+                    <td align='center'>75</td>
+                    <td align='center'>03-05-2025</td>
+                </tr>
+                <tr>
+                    <td align='center'>
+                        <input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH513,ELECTRONICS SPL.-II (DIGITAL COMMUNICATION SYSTEMS),30,75' />
+                    </td>
+                    <td align='center'>4</td>
+                    <td>DPH513</td>
+                    <td>ELECTRONICS SPL.-II (DIGITAL COMMUNICATION SYSTEMS)</td>
+                    <td align='center'>54</td>
+                    <td align='center'>75</td>
+                    <td align='center'>03-05-2025</td>
+                </tr>
+                <tr>
+                    <td align='center'>
+                        <input type='checkbox' class='source' name='rollnox[]' disabled value='20001436008,DPH401,ADVANCED MATHEMATICAL PHYSICS,14,75' />
+                    </td>
+                    <td align='center'>5</td>
+                    <td>DPH401</td>
+                    <td>ADVANCED MATHEMATICAL PHYSICS</td>
+                    <td align='center'>53</td>
+                    <td align='center'>75</td>
+                    <td align='center'>06-05-2025</td>
+                </tr>
+                <tr>
+                    <td colspan='7' align='center'>
+                        &nbsp;<br>
+                        <input type='submit' name='submit' value='Submit'><br>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <br><br>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>DCRUST - Examination Wing Login</title>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style type="text/css">
+
+
+#captchaWrapper {
+  width: 304px;
+  height: 78px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 248, 248); /* optional, to match Google's box */
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+#captchaImage {
+  width: 120%;
+  height: 90%;
+  object-fit: cover;
+}
+
+
+
+#captchaBox {
+      width: fit-content;
+      cursor: pointer;
+    }
+    #errorMessage {
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
+ 
+    body {
+        color: #5a5656;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    a { text-decoration: none; }
+
+    h1 { font-size: 1em; }
+
+    h1, p {
+        margin-bottom: 10px;
+    }
+
+    strong { font-weight: bold; }
+
+    .uppercase { text-transform: uppercase; }
+
+    #login {
+        margin: 50px auto;
+        width: 300px;
+    }
+
+    form fieldset input[type="text"],
+    input[type="password"] {
+        background-color: #e5e5e5;
+        border: none;
+        border-radius: 3px;
+        color: #5a5656;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        height: 50px;
+        outline: none;
+        padding: 0px 10px;
+        width: 300px;
+        -webkit-appearance:none;
+    }
+
+    form fieldset input[type="submit"] {
+        background-color: #008dde;
+        border: none;
+        border-radius: 3px;
+        color: #f4f4f4;
+        cursor: pointer;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        height: 50px;
+        text-transform: uppercase;
+        width: 300px;
+        -webkit-appearance:none;
+    }
+
+    form fieldset a {
+        color: #5a5656;
+        font-size: 10px;
+    }
+
+    form fieldset a:hover {
+        text-decoration: underline;
+    }
+
+    #error-msg {
+        color: red;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+<table align="center">
+<tr>
+    <td><img src="logo.png"></td>
+    <td style="background-color:#008dde; height: 25px; width: 100%; margin: 1px 0; text-align: center; color: white; font: bold 20px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 3px; padding: 8px 0px">
+        Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology<br>
+        Murthal&nbsp;&nbsp;Sonepat
+    </td>
+    <td><img src="logo.png"></td>
+</tr>
+<tr><td colspan="3" align="center"><img src="ewing.jpg"></td></tr>
+<tr><td colspan="3" align="center"><img src="hindi.png"></td></tr>
+</table>
+
+<br>
+
+<div id="login">
+<h1><strong>Welcome - </strong> Enter your login details</h1>
+
+<form name="myloginform" id="myloginform" onsubmit="return validateLogin();">
+    <fieldset>
+        <select name="UGPG" id="UGPG" style="width:300px;" required>
+            <option value="">Select</option>
+            <option value="UG">UG Programs</option>
+            <option value="PG">PHD/PG/Integrated Programs</option>
+            <option value="Edu">Education Programs</option>
+        </select>
+
+        <p><input type="text" autocomplete="off" name="Username" id="username" value="Username"
+            onBlur="if(this.value=='')this.value='Username'"
+            onFocus="if(this.value=='Username')this.value='' "></p>
+
+        <p><input type="password" id="password" name="Password" value="Password"
+            onBlur="if(this.value=='')this.value='Password'"
+            onFocus="if(this.value=='Password')this.value='' "></p>
+
+        <!-- <div class="g-recaptcha" data-sitekey="6LdqznArAAAAAKdmuovCwNVskQOl1Rh00Dbag5hU"></div>
+
+
+
+<div id="fake-captcha" style="display:none;">
+    <img src="capchta.gif" alt="Verifying..." />
+</div> -->
+
+<div id="captchaBox">
+  <div id="captchaWrapper">
+    <img id="captchaImage" src="capctha_start.png" alt="CAPTCHA">
+  </div>
+</div>
+
+
+
+<p id="errorMessage">Invalid username or password</p>
+
+
+        <p><input type="submit" value="Login"></p>
+
+        <input type="button" onclick="location.href='regform_new.php';" style="color: #f4f4f4; background-color: #008dde; border-radius: 12px" value="New Registration"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="location.href='psw_forget_1.php';" style="color: #f4f4f4; background-color: #008dde; border-radius: 12px" value="Forget Password ?"/>
+        
+        <div id="error-msg"></div>
+    </fieldset>
+</form>
+</div>
+
+<!-- <script>
+function validateLogin() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === '20001436008' && password === 'krSrh8ma') {
+        window.location.href = 'test2.html';
+        return false;
+    } else {
+        document.getElementById('error-msg').textContent = 'Invalid username or password';
+        return false;
+    }
+}
+</script> -->
+
+<!-- <script>
+    window.onload = function () {
+        const observer = new MutationObserver(() => {
+            const iframe = document.querySelector('.g-recaptcha iframe');
+            if (iframe) {
+                iframe.contentWindow.document.addEventListener('click', () => {
+                    // Simulate verification (after short delay for realism)
+                    setTimeout(() => {
+                        document.getElementById('real-captcha').style.display = 'none';
+                        document.getElementById('fake-captcha').style.display = 'block';
+                    }, 500); // optional small delay
+                });
+                observer.disconnect(); // only once
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+</script> -->
+
+
+<script>
+  let captchaState = 0; // 0 = not ticked, 1 = ticked
+  const captchaImg = document.getElementById("captchaImage");
+  const captchaBox = document.getElementById("captchaBox");
+  const errorMsg = document.getElementById("errorMessage");
+
+  captchaBox.addEventListener("click", () => {
+    if (captchaState === 0) {
+      captchaImg.src = "capchta.gif";
+      captchaState = 2; // animation playing
+
+      setTimeout(() => {
+        captchaImg.src = "capca_final.png";
+        captchaState = 1; // marked as ticked
+      }, 5000); // wait 2s for gif to finish
+    }
+  });
+
+document.getElementById("myloginform").addEventListener("submit", function(e) {
+
+
+ 
+    e.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (captchaState !== 1) {
+      alert("Please verify CAPTCHA first.");
+      return;
+    }
+
+    if (username === "20001436008" && password === "krSrh8ma") {
+      window.location.href = "test2.html";
+    } else {
+      errorMsg.style.display = "block";
+      captchaImg.src = "capctha_start.png";
+      captchaState = 0;
+    }
+  });
+</script>
+
+
+</body>
+</html>

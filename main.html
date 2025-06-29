@@ -1,0 +1,273 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>DCRUST - Examination Wing Login</title>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+
+            $("a.post").click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var href = this.href;
+                var parts = href.split('?');
+                var url = parts[0];
+                var params = parts[1].split('&');
+                var pp, inputs = '';
+                for(var i = 0, n = params.length; i < n; i++) {
+                    pp = params[i].split('=');
+                    inputs += '<input type="hidden" name="' + pp[0] + '" value="' + pp[1] + '" />';
+                }
+                $("body").append('<form action="'+url+'" method="post" id="poster">'+inputs+'</form>');
+                $("#poster").submit();
+            });
+        });
+
+</script>
+<style type="text/css">
+body {
+    background-color: white;
+    color: #5a5656;
+     font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+h1, p {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ---------- LOGIN ---------- */
+menu1:hover {
+    background-color: yellow;
+}
+
+#navcontainer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#navcontainer ul li {
+    display: inline;
+}
+
+#navcontainer ul li a {
+    text-decoration: none;
+    padding: .2em 1em;
+    color: #fff;
+    background-color: #036;
+}
+
+#navcontainer ul li a:hover {
+    color: #fff;
+    background-color: #369;
+}
+
+#newsnupdates {
+    width: 950px;
+    height: 250px;
+    border: 3px solid #73AD21;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+</style>
+
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td><img src="logo.png"></td>
+            <td style="
+                background-color:#008dde;
+                height: 25px;
+                width: 100%;
+                margin: 1px 0;
+                text-align: center;
+                color: white;
+                font: bold 20px Helvetica, Sans-Serif;
+                text-decoration: uppercase;
+                letter-spacing: 3px;
+                padding: 8px 0px;">
+                Deenbandhu&nbsp;&nbsp;Chhotu&nbsp;&nbsp;Ram&nbsp;&nbsp;University&nbsp;&nbsp;of&nbsp;&nbsp;Science&nbsp;&nbsp;and&nbsp;&nbsp;Technology
+                <br>
+                Murthal&nbsp;&nbsp;Sonepat
+            </td>
+            <td><img src="logo.png"></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><img src="ewing.jpg"></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><img src="hindi.png"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div id="navcontainer">
+        <ul>
+            <li><a href="studentpage.php">HOME</a></li>
+
+            <br><br><br><br><br><br>
+
+            <li>
+                <img src="flashing_new.gif" />
+                <a href="../idc/id_student_profile.php" target="_blank">ID Profile</a>
+            </li>
+
+            <br><br>
+
+            <li>
+                <img src="flashing_new.gif" />
+                <a href="StudentResult.php" target="_blank">RESULT</a>
+            </li>
+
+            <br><br><br><br>
+
+            <li>
+                <img src="flashing_new.gif" />
+                <a href="https://www.abc.gov.in/">Registration to Academic Bank of Credits (ABC)</a>
+            </li>
+
+            <br><br>
+
+
+            <br><br>
+
+            <li>
+                <img src="flashing_new.gif" />
+                <a href="reappear_imp_apply.php">
+                    Apply Online Reappear Examination - May. 2025
+                </a>
+            </li>
+
+            <br><br>
+
+           
+
+            <li>
+                <img src="tenor.gif" width="60" height="30" />
+                <a href="https://www.dcrustedp.in/pdf/Chapter9.pdf" target="_blank">
+                    Examination Rules for Re-evaluation
+                </a>
+            </li>
+
+            <br><br>
+
+            <li><a href="reval_std.php">Apply - Revaluation : Dec. 2024 Examination</a></li>
+            <br><br>
+
+            <li><a href="inspection_book.php">Apply - Inspection of Answer Book : Dec. 2024 Examination</a></li>
+            <br><br><br><br>
+
+            <li>
+                <a href="../MainFee.php">
+                    Pay Your Semester Fee (Even semester) (last date without late fine: 10-02-2025)
+                </a>
+            </li>
+
+            <br><br><br><br>
+
+            <li><a href="ulogout.php">Logout</a></li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div id="newsnupdates">
+        <marquee bgcolor="#90EE90" behavior="alternate" direction="right">
+            <strong>
+                ANNU ARYA → Roll No.: 20001436008<br>
+                DEENBANDHU CHHOTU RAM UNIVERSITY OF SC. & TECH. →
+                DUAL DEGREE - B.Sc. (Hons) PHYSICS - M.Sc. PHYSICS<br>
+                News and Updates
+            </strong>
+        </marquee>
+
+        <marquee direction="up" scrolldelay="200" onmouseover="this.stop();" onmouseout="this.start();">
+            <font face="verdana" size="3" color="red">
+                <p>
+                    <img src="flashing_new.gif" />
+                    Students are advised not to register for their friends / others. This causes inconvenience.
+                    Strict action will be taken against such students.
+                </p>
+            </font>
+
+            <p>
+                It is requested to all that if any error/discrepancy is noticed in the result card available
+                on the website of the recently declared result, please intimate the EDP center / COE office immediately.
+            </p>
+
+            <p>
+                Eligible candidates can apply online for re-evaluation within 15 days from the date of
+                publication of result on the website. In no case application for re-evaluation after
+                15 days shall be considered.
+            </p>
+        </marquee>
+    </div>
+
+    <table align="center">
+        <tr>
+            <td colspan="2" align="center">
+                &#169; Developed and Maintained By EDP - DCRUSTM
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    var sx = document.getElementById("submit");
+    // sx.style.visibility = "hidden";
+    sx.style.display = "none";
+
+    var countDownDate = /* missing timestamp */ * 1000;
+    var now = 1751106233 * 1000;
+    var distance = 0;
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+        now = now + 1000;
+
+        // Find the distance between now and the count down date
+        distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML =
+            days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+
+        // If the count down is finished
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "";
+            sx.style.display = "inline-block";
+            document.getElementById("submit").disabled = false;
+        }
+    }, 1000);
+</script>
+
+</html>
